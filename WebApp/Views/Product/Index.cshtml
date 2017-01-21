@@ -1,0 +1,220 @@
+﻿@model ICollection<Product>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/home.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+              @{var a = @Model.ElementAt(0).ProductId;}
+                <div class="col-md-3">
+                    <img src="~/images/Clothes1.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Kosulja</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod temporNIKOLICAabore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 110$ </h3>
+                    <a asp-area="" asp-route-id="@Model.ElementAt(0).ProductId" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+     <!--           <div class="col-md-3">
+                    <img src="~/images/Clothes2.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Kosulja</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor inciPRIKOLICAdunt ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 150$ </h3>
+                    <a asp-area="" asp-route-id="@**@Model.ElementAt(1).ProductId" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Clothes3.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Haljina</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor inciduOSTATAKnt ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 110$ </h3>
+                    <a asp-area="@**@Model.ElementAt(2).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Clothes4.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Majica</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor inciduntBOBICA ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 120$ </h3>
+                    <a asp-area="@**@Model.ElementAt(3).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/images/Clothes5.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Haljina</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quiANANASs nostrud
+                    </p>
+                    <h3> PRICE: 105$ </h3>
+                    <a asp-area="@**@Model.ElementAt(4).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Clothes6.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Kosulja</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor inciduntKRUSKA ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 110$ </h3>
+                    <a asp-area="@**@Model.ElementAt(5).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Clothes7.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Haljina</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor incidunt JABUKAut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 120$ </h3>
+                    <a asp-area="@**@Model.ElementAt(6).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Clothes8.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Haljina</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis SLJIVAnostrud
+                    </p>
+                    <h3> PRICE: 130$ </h3>
+                    <a asp-area="@**@Model.ElementAt(8).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/images/Gift1.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Nov?anici</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod temporNIKOLICAabore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 11$ </h3>
+                    <a asp-area="@**@Model.ElementAt(9).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Gift2.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Ogrlica</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor inciPRIKOLICAdunt ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 15$ </h3>
+                    <a asp-area="@**@Model.ElementAt(10).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Gift3.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Kapa</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor inciduOSTATAKnt ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 11$ </h3>
+                    <a asp-area="@**@Model.ElementAt(11).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Gift4.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Kapa</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor inciduntBOBICA ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 12$ </h3>
+                    <a asp-area="@**@Model.ElementAt(12).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/images/Gift5.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Narukvica</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quiANANASs nostrud
+                    </p>
+                    <h3> PRICE: 10$ </h3>
+                    <a asp-area="@**@Model.ElementAt(13).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Gift6.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Kapa</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor inciduntKRUSKA ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 11$ </h3>
+                    <a asp-area="@**@Model.ElementAt(14).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Gift7.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Ruksak</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor incidunt JABUKAut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis nostrud
+                    </p>
+                    <h3> PRICE: 120$ </h3>
+                    <a asp-area="@**@Model.ElementAt(15).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>
+                <div class="col-md-3">
+                    <img src="~/images/Gift8.jpg" class="center-block img-responsive img-rounded">
+                    <h2>Kapa</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisici elit,
+                        <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                        <br>Ut enim ad minim veniam, quis SLJIVAnostrud
+                    </p>
+                    <h3> PRICE: 13$ </h3>
+                    <a asp-area="@**@Model.ElementAt(7).ProductId" asp-route-id="" asp-controller="ShoppingCart" asp-action="AddToCart">Add to cart</a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
