@@ -38,6 +38,7 @@
                             <a asp-controller="ShoppingCart" asp-action="CreateOrder" asp-route-id="@Model.CartId"></a>
                         </div>
                     </div>
+                    @{ var o = Model.CartedProducts;}
                     <span class="badge">@Model.CartedProducts.Sum(s => s.Quantity)</span>
                 </div>
             </div>

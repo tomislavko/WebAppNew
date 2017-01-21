@@ -13,7 +13,7 @@ namespace WebApp.Models
         public Order()
         {
             OrderId = Guid.NewGuid();
-            Products = new List<Product>();
+           
         }
 
         public Guid OrderId { get; set; }
@@ -66,7 +66,6 @@ namespace WebApp.Models
         [ScaffoldColumn(false)]
         public decimal Total { get; set; }
 
-        [BindNever]
-        public List<Product> Products { get; set; }
+        
     }
 }

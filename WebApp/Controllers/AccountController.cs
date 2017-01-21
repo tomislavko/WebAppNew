@@ -129,7 +129,7 @@ namespace WebApp.Controllers
 
                     User myUser = new User(user.Id, user.UserName, user.Email);
                     _webAppSqlRepository.AddUser(myUser);
-                    _webAppSqlRepository.AddCart(new ShoppingCart(myUser));
+                    //_webAppSqlRepository.AddCart(new ShoppingCart(myUser));
 
                     if (true)
                     {

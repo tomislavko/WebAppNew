@@ -25,6 +25,8 @@ namespace WebApp.Models
 
         public List<Product> CartedProducts { get; set; }
 
+        public Dictionary<Guid, int> NumOfItems { get; set; }
+
         [BindNever]
         // use virtual for lazy loading
         public Order Order { get; set; }
@@ -36,6 +38,7 @@ namespace WebApp.Models
             User = user;
             IsCompleted = false;
             CartedProducts = new List<Product>();
+            NumOfItems = new Dictionary<Guid, int>();
         }
 
        

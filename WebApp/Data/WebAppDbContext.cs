@@ -38,6 +38,7 @@ namespace WebApp.Data
             modelBuilder.Entity<Product>().Property(s => s.ThumbPath).IsRequired();
             modelBuilder.Entity<Product>().Property(s => s.Quantity).IsRequired();
             modelBuilder.Entity<Product>().Property(s => s.IsUnlimited).IsRequired();
+
         
 
             modelBuilder.Entity<ShoppingCart>().HasKey(s => s.CartId);
@@ -45,7 +46,8 @@ namespace WebApp.Data
             modelBuilder.Entity<ShoppingCart>().Property(s => s.DateCreated).IsRequired();
             modelBuilder.Entity<ShoppingCart>().Property(s => s.DateRequested).IsOptional();
             modelBuilder.Entity<ShoppingCart>().Property(s => s.IsCompleted).IsRequired();
-            modelBuilder.Entity<ShoppingCart>().HasOptional(s => s.CartedProducts).WithMany();
+            modelBuilder.Entity<ShoppingCart>().HasMany(s => s.CartedProducts).WithMany();
+            modelBuilder.Entity<ShoppingCart>().HasOptional(s => s.NumOfItems);
             modelBuilder.Entity<ShoppingCart>().HasOptional(s => s.Order);
 
             modelBuilder.Entity<User>().HasKey(s => s.Id);
@@ -64,9 +66,7 @@ namespace WebApp.Data
             modelBuilder.Entity<Order>().Property(s => s.Phone).IsRequired();
             modelBuilder.Entity<Order>().Property(s => s.Email).IsRequired();
             modelBuilder.Entity<Order>().Property(s => s.Total).IsRequired();
-            modelBuilder.Entity<Order>().HasRequired(s => s.Products).WithMany();
-        
-
+     
         }
 
     }

@@ -189,7 +189,7 @@ namespace WebApp.Controllers
 
         [Authorize(Roles = "User")]
         [HttpGet]
-        public IActionResult ViewProducts(string category)
+        public IActionResult CategoryProducts(string category)
         {
             
             List<Product> filtered = _webAppSqlRepository.GetFiltered(p => p.Category == category);

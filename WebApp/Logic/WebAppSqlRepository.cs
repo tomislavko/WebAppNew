@@ -256,14 +256,23 @@ namespace WebApp.Logic
                 AddCart(cart);
                 return;
             }
-            var prod = cart.CartedProducts.SingleOrDefault(s => s.ProductId == product.ProductId);
-            if (prod == null)
+
+            if (cart.CartedProducts == null)
             {
-                cart.CartedProducts.Add(new Product(product, quantity));
+                cart.CartedProducts = new List<Product>();
+                cart.CartedProducts.Add(/*new Product(product, quantity*/));
             }
             else
             {
-                prod.Quantity += quantity;
+                var prod = cart.CartedProducts.SingleOrDefault(s => s.ProductId == product.ProductId);
+                if (prod == null)
+                {
+                    cart.CartedProducts.Add(new Product(product, quantity));
+                }
+                else
+                {
+                    prod.Quantity += quantity;
+                }
             }
             _context.SaveChanges();
             //UpdateCart(cart);
